@@ -35,13 +35,13 @@ scope = [
 creds  = ServiceAccountCredentials.from_json_keyfile_name(CREDS_PATH, scope)
 client = gspread.authorize(creds)
 
-spreadsheet = client.open("DATA COMPROMISO 1 CONSOLIDADO ABRIL ")
+spreadsheet = client.open("PROGRAMACION_ABRIL")
 
 # hojas
 HOJAS_ACTORES = [
     h.title for h in spreadsheet.worksheets()
     if h.title not in [
-        "telefono","Sheet1","RURAL","FIRMAS",
+        "telefono","Sheet1","URBANA","FIRMAS",
         "HEMOGLOBINA","VACUNAS","SEGUIMIENTO 1",
         "SEGUIMIENTO GESTORA","CONSOLIDADO"
     ]
@@ -174,7 +174,7 @@ def registrar_visitas_sheet(dni, registros):
         key=lambda x: x.get("fecha_visita_1") or ""
     )
 
-    columnas = ["Z","AC","AF"]
+    columnas = ["Y","AB","AE"]
 
     colores = {
         1: {"red":0.75,"green":0.95,"blue":0.75},
