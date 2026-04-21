@@ -28,4 +28,4 @@ jobs:
           SEAAP_USER: ${{ secrets.SEAAP_USER }}
           SEAAP_PASS: ${{ secrets.SEAAP_PASS }}
           GOOGLE_CREDS: ${{ secrets.GOOGLE_CREDS }}
-        run: python main.py
+        run: python main.pyw
