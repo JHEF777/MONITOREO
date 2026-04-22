@@ -177,10 +177,10 @@ def registrar_visitas_sheet(dni, registros):
     columnas = ["Y","AB","AE"]
 
     colores = {
-        1: {"red":0.75,"green":0.95,"blue":0.75},
-        2: {"red":0.75,"green":0.95,"blue":0.75},
-        4: {"red":1,"green":0.65,"blue":0.65},
-        5: {"red":0.8,"green":0.65,"blue":0.95}
+        1: {"red":0.0,"green":0.8,"blue":0.0},     # verde fuerte
+        2: {"red":0.0,"green":0.8,"blue":0.0},     # verde fuerte
+        4: {"red":1.0,"green":0.0,"blue":0.0},     # rojo intenso
+        5: {"red":0.6,"green":0.0,"blue":1.0}      # morado intenso
     }
 
     for i, reg in enumerate(registros_ordenados[:3]):
